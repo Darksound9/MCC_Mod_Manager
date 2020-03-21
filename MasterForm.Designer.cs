@@ -39,7 +39,7 @@ namespace MCC_Mod_Manager
             this.titleLabel = new System.Windows.Forms.Label();
             this.exitButton = new System.Windows.Forms.PictureBox();
             this.betterPBar = new System.Windows.Forms.Panel();
-            this.TabControl = new System.Windows.Forms.TabControl();
+            this.TabControl = new ModManagerCustomControls.CustomTabControl();
             this.MyModsTab = new System.Windows.Forms.TabPage();
             this.manualOverride = new System.Windows.Forms.CheckBox();
             this.selectEnabled_chb = new System.Windows.Forms.CheckBox();
@@ -59,6 +59,7 @@ namespace MCC_Mod_Manager
             this.createLabel1 = new System.Windows.Forms.Label();
             this.createFilesPanel = new System.Windows.Forms.Panel();
             this.ConfigurationTab = new System.Windows.Forms.TabPage();
+            this.CreatedByLabel = new System.Windows.Forms.Label();
             this.resetApp = new System.Windows.Forms.Button();
             this.delOldBaks_chb = new System.Windows.Forms.CheckBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -84,7 +85,6 @@ namespace MCC_Mod_Manager
             this.bakLabel2 = new System.Windows.Forms.Label();
             this.bakLabel1 = new System.Windows.Forms.Label();
             this.bakListPanel = new System.Windows.Forms.Panel();
-            this.CreatedByLabel = new System.Windows.Forms.Label();
             this.topBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refreshButton)).BeginInit();
@@ -191,8 +191,7 @@ namespace MCC_Mod_Manager
             this.TabControl.Controls.Add(this.CreateModpackTab);
             this.TabControl.Controls.Add(this.ConfigurationTab);
             this.TabControl.Controls.Add(this.BackupsTab);
-            this.TabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TabControl.ItemSize = new System.Drawing.Size(58, 30);
+            this.TabControl.ItemSize = new System.Drawing.Size(116, 20);
             this.TabControl.Location = new System.Drawing.Point(0, 40);
             this.TabControl.Name = "TabControl";
             this.TabControl.SelectedIndex = 0;
@@ -210,10 +209,10 @@ namespace MCC_Mod_Manager
             this.MyModsTab.Controls.Add(this.homeNameLabel);
             this.MyModsTab.Controls.Add(this.homeSelectLabel);
             this.MyModsTab.Controls.Add(this.modListPanel);
-            this.MyModsTab.Location = new System.Drawing.Point(4, 34);
+            this.MyModsTab.Location = new System.Drawing.Point(0, 19);
             this.MyModsTab.Name = "MyModsTab";
             this.MyModsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.MyModsTab.Size = new System.Drawing.Size(569, 364);
+            this.MyModsTab.Size = new System.Drawing.Size(577, 383);
             this.MyModsTab.TabIndex = 0;
             this.MyModsTab.Text = "My Mods";
             // 
@@ -236,7 +235,7 @@ namespace MCC_Mod_Manager
             this.selectEnabled_chb.CheckState = System.Windows.Forms.CheckState.Checked;
             this.selectEnabled_chb.Location = new System.Drawing.Point(432, 248);
             this.selectEnabled_chb.Name = "selectEnabled_chb";
-            this.selectEnabled_chb.Size = new System.Drawing.Size(112, 17);
+            this.selectEnabled_chb.Size = new System.Drawing.Size(98, 17);
             this.selectEnabled_chb.TabIndex = 15;
             this.selectEnabled_chb.Text = "Select Enabled";
             this.selectEnabled_chb.UseVisualStyleBackColor = true;
@@ -312,10 +311,10 @@ namespace MCC_Mod_Manager
             this.CreateModpackTab.Controls.Add(this.createLabel2);
             this.CreateModpackTab.Controls.Add(this.createLabel1);
             this.CreateModpackTab.Controls.Add(this.createFilesPanel);
-            this.CreateModpackTab.Location = new System.Drawing.Point(4, 34);
+            this.CreateModpackTab.Location = new System.Drawing.Point(0, 21);
             this.CreateModpackTab.Name = "CreateModpackTab";
             this.CreateModpackTab.Padding = new System.Windows.Forms.Padding(3);
-            this.CreateModpackTab.Size = new System.Drawing.Size(569, 364);
+            this.CreateModpackTab.Size = new System.Drawing.Size(577, 381);
             this.CreateModpackTab.TabIndex = 1;
             this.CreateModpackTab.Text = "Create Modpack";
             // 
@@ -408,12 +407,22 @@ namespace MCC_Mod_Manager
             this.ConfigurationTab.Controls.Add(this.configLabel2);
             this.ConfigurationTab.Controls.Add(this.cfgUpdateBtn);
             this.ConfigurationTab.Controls.Add(this.configLabel1);
-            this.ConfigurationTab.Location = new System.Drawing.Point(4, 34);
+            this.ConfigurationTab.Location = new System.Drawing.Point(0, 19);
             this.ConfigurationTab.Name = "ConfigurationTab";
             this.ConfigurationTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ConfigurationTab.Size = new System.Drawing.Size(569, 364);
+            this.ConfigurationTab.Size = new System.Drawing.Size(577, 383);
             this.ConfigurationTab.TabIndex = 2;
             this.ConfigurationTab.Text = "Configuration";
+            // 
+            // CreatedByLabel
+            // 
+            this.CreatedByLabel.AutoSize = true;
+            this.CreatedByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CreatedByLabel.Location = new System.Drawing.Point(39, 325);
+            this.CreatedByLabel.Name = "CreatedByLabel";
+            this.CreatedByLabel.Size = new System.Drawing.Size(296, 13);
+            this.CreatedByLabel.TabIndex = 62;
+            this.CreatedByLabel.Text = "Created and built by MrFRZ0 ~ Enhancements by Darksound";
             // 
             // resetApp
             // 
@@ -431,7 +440,7 @@ namespace MCC_Mod_Manager
             this.delOldBaks_chb.AutoSize = true;
             this.delOldBaks_chb.Location = new System.Drawing.Point(226, 121);
             this.delOldBaks_chb.Name = "delOldBaks_chb";
-            this.delOldBaks_chb.Size = new System.Drawing.Size(288, 17);
+            this.delOldBaks_chb.Size = new System.Drawing.Size(243, 17);
             this.delOldBaks_chb.TabIndex = 60;
             this.delOldBaks_chb.Text = "Delete backups after restoring? (saves space)";
             this.delOldBaks_chb.UseVisualStyleBackColor = true;
@@ -569,10 +578,10 @@ namespace MCC_Mod_Manager
             this.BackupsTab.Controls.Add(this.bakLabel2);
             this.BackupsTab.Controls.Add(this.bakLabel1);
             this.BackupsTab.Controls.Add(this.bakListPanel);
-            this.BackupsTab.Location = new System.Drawing.Point(4, 34);
+            this.BackupsTab.Location = new System.Drawing.Point(0, 19);
             this.BackupsTab.Name = "BackupsTab";
             this.BackupsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.BackupsTab.Size = new System.Drawing.Size(569, 364);
+            this.BackupsTab.Size = new System.Drawing.Size(577, 383);
             this.BackupsTab.TabIndex = 3;
             this.BackupsTab.Text = "Backups";
             // 
@@ -581,7 +590,7 @@ namespace MCC_Mod_Manager
             this.fullBakPath_chb.AutoSize = true;
             this.fullBakPath_chb.Location = new System.Drawing.Point(421, 121);
             this.fullBakPath_chb.Name = "fullBakPath_chb";
-            this.fullBakPath_chb.Size = new System.Drawing.Size(107, 17);
+            this.fullBakPath_chb.Size = new System.Drawing.Size(93, 17);
             this.fullBakPath_chb.TabIndex = 17;
             this.fullBakPath_chb.Text = "Show full path";
             this.fullBakPath_chb.UseVisualStyleBackColor = true;
@@ -667,16 +676,6 @@ namespace MCC_Mod_Manager
             this.bakListPanel.Size = new System.Drawing.Size(402, 322);
             this.bakListPanel.TabIndex = 9;
             // 
-            // label1
-            // 
-            this.CreatedByLabel.AutoSize = true;
-            this.CreatedByLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.CreatedByLabel.Location = new System.Drawing.Point(39, 325);
-            this.CreatedByLabel.Name = "label1";
-            this.CreatedByLabel.Size = new System.Drawing.Size(105, 13);
-            this.CreatedByLabel.TabIndex = 62;
-            this.CreatedByLabel.Text = "Created and built by MrFRZ0 ~ Enhancements by Darksound";
-            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -726,7 +725,8 @@ namespace MCC_Mod_Manager
         public System.Windows.Forms.PictureBox refreshButton;
         public System.Windows.Forms.Label version_lbl;
         public System.Windows.Forms.Panel betterPBar;
-        public System.Windows.Forms.TabControl TabControl;
+        //public System.Windows.Forms.TabControl TabControl;
+        public ModManagerCustomControls.CustomTabControl TabControl;
         public System.Windows.Forms.TabPage MyModsTab;
         public System.Windows.Forms.TabPage CreateModpackTab;
         public System.Windows.Forms.TabPage ConfigurationTab;
